@@ -1,0 +1,38 @@
+# basic
+nltk
+tqdm
+pandas
+matplotlib
+jupyter
+scikit-learn
+# torch    # NOTE: Typically, you should install torch with cuda beforehand.
+transformers
+accelerate
+datasets
+bitsandbytes
+loralib
+sentencepiece
+torchmetrics
+wandb
+fire
+git+https://github.com/huggingface/peft.git
+openai
+# unieval
+protobuf
+rouge-score
+py7zr
+evaluate
+prettytable
+editdistance
+# MFMA
+spacy
+spacy-legacy
+spacy-loggers
+# kilt
+pymongo
+beautifulsoup4
+tiktoken
+evaluate
+sacrebleu
+bert_score
+git+https://github.com/google-research/bleurt.git

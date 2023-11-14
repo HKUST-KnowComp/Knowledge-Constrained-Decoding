@@ -1,6 +1,6 @@
 # Knowledge Constrained Decoding
 
-Official Code for EMNLP 2023 Paper "KCTS: Knowledge-Constrained Tree Search Decoding with Token-Level Hallucination Detection".
+Official Code for EMNLP 2023 Paper "KCTS: Knowledge-Constrained Tree Search Decoding with Token-Level Hallucination Detection" (https://arxiv.org/abs/2310.09044).
 
 ## Environment
 

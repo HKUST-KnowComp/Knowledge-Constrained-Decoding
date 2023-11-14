@@ -46,10 +46,13 @@ random_data = load_from_disk(random_data_path)
 
 merged_dataset = concatenate_datasets([partial_data, random_data])
 merged_dataset.train_test_split(test_size=0.1)
+
+merged_dataset.save_to_disk(SAVE_PATH)
 ```
 ## Train RIPA discrimnator
 
 ```bash
+# the numbers are the stdin options of the train script. Details can be found at the top of the script file.
 sh scripts/shell/train/train_t5_token_classifier.sh 0 EOS 0 0 0 0  # train f
 sh scripts/shell/train/train_t5_token_classifier.sh 0 RIPA 0 0 0 1  # finetune RIPA from f
 sh scripts/shell/train/train_t5_token_classifier_cnn.sh 0 RIPA 0 0 0 0  # cnn
@@ -76,7 +79,7 @@ sh scripts/shell/ppl_mcts_run.sh 0 RIPA '' wow 8 0 0 0 0 0
 
 ```bash
 export EXP_ROOT=<ROOT DIRECTORY FOR EXPERIMENT>
-sh scripts/shell/openai_guided_run.sh 0 PARTIAL 4 $EXP_ROOT 0 0 3 0 0 0
+sh scripts/shell/openai_guided_run.sh 0 RIPA 4 $EXP_ROOT 0 0 3 0 0 0
 ```
 
 ## Evaluation
